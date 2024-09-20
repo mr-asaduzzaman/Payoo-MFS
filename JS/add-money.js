@@ -1,20 +1,18 @@
-const addMoneyButton = document.getElementById('add-money-button');
-
+const addMoneyButton = document.getElementById('money-add-button');
 
 addMoneyButton.addEventListener('click', function (event) {
-    const addAmountValue = document.getElementById('enter-amount').value;
-    const pinNumber = document.getElementById('pin-number').value;
     // Stop the form behavior to reload the browser. //
     event.preventDefault();
 
 
-    if (pinNumber === '1234') {
+    const addBalance = addInputFieldValueByID('enter-amount')
+    const pinNumber = addInputFieldValueByID('pin-number')
+    const balance = addTextFieldValueByID('balance')
+    const balanceDigit = parseFloat(balance)
+    if (pinNumber === 1234) {
 
-        const accountBalance = document.getElementById('balance').innerText;
-        const balanceBefore = parseFloat(accountBalance);
-        const balanceInput = parseFloat(addAmountValue);
-        const currentBalance = balanceBefore + balanceInput;
-        document.getElementById('balance').innerText = currentBalance;
+        const newBalance = balanceDigit + addBalance;
+        document.getElementById('balance').innerText = newBalance;
         document.getElementById('enter-amount').value = '';
         document.getElementById('pin-number').value = '';
     }

@@ -22,15 +22,15 @@
             <header>
                 <ul class="menu menu-horizontal bg-indigo-100 rounded-box w-72 flex justify-between">
                     <li>
-                        <a>
+                        <a href="">
                             <i class="fa-solid fa-house text-xl"></i>
                         </a>
                     </li>
                     <li>
-                        <label class="font-bold text-xl">$<span>10000</span></label>
+                        <label class="font-bold text-xl">$<span id="balance">10000</span></label>
                     </li>
                     <li>
-                        <a>
+                        <a href="./index.html">
                             <i class="fa-solid fa-right-from-bracket text-xl"></i>
                         </a>
                     </li>
@@ -40,28 +40,26 @@
             <div class="divider"></div>
             <!-- Button Start -->
             <div class="grid grid-cols-3 gap-2 mx-2">
-                <button class="btn btn-outline bg-indigo-100 text-white btn-primary">Add Money</button>
-                <button class="btn btn-outline bg-indigo-100 text-white btn-primary">Cash Out</button>
-                <button class="btn btn-outline bg-indigo-100 text-white btn-primary">Transfer Money</button>
+                <button id="add-money-button" class="btn btn-outline bg-indigo-100 text-white btn-primary">Add Money</button>
+                <button id="cash-out-button" class="btn btn-outline bg-indigo-100 text-white btn-primary">Cash Out</button>
+                <button id="transection-button" class="btn btn-outline bg-indigo-100 text-white btn-primary">Transaction</button>
                 <button class="btn btn-outline bg-indigo-100 text-white btn-primary">Got Bonus</button>
                 <button class="btn btn-outline bg-indigo-100 text-white btn-primary">Pay Bill</button>
-                <button class="btn btn-outline bg-indigo-100 text-white btn-primary">Transaction</button>
+                <button class="btn btn-outline bg-indigo-100 text-white btn-primary">Transfer Money</button>
             </div>
             <!-- Button End -->
             <div class="divider"></div>
 
-
             <!-- BG Start -->
-            <div class="mt-24">
+            <div class="mt-24" id="BG-Image">
                 <img class="" src="Images/ddd.webp" alt="">
             </div>
             <!-- BG End -->
 
-
             <!-- Form Start -->
             <!-- Add Money Start -->
-            <section>
-                <div class=" hidden bg-base-100 max-w-md h-72 shadow-sm rounded-xl">
+            <section class="hidden" id="add-money-form">
+                <div class="bg-base-100 max-w-md h-72 shadow-sm rounded-xl">
                     <form class="card-body">
                         <div class="form-control">
                             <label class="label">
@@ -78,15 +76,52 @@
                                 class="input input-bordered rounded-lg" required autocomplete="off" />
                         </div>
                         <div class="form-control mt-2">
-                            <button id="add-money-button" class="btn btn-primary">Add Money</button>
+                            <button id="money-add-button" class="btn btn-primary">Add Money</button>
                         </div>
                     </form>
                 </div>
             </section>
             <!-- Add Money End -->
-            <!-- Form End -->
 
+            <!-- Cash Out Start -->
+            <section class="hidden" id="cash-out-form">
+                <div class="bg-base-100 max-w-md h-72 shadow-sm rounded-xl">
+                    <form class="card-body">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-bold">Cash Out Amount</span>
+                            </label>
+                            <input id="out-enter-amount" type="text" placeholder="Enter Amount"
+                                class="input input-bordered rounded-lg" required />
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-bold">4 digit Pin</span>
+                            </label>
+                            <input id="out-pin-number" type="password" placeholder=" Enter your 4 digit pin"
+                                class="input input-bordered rounded-lg" required autocomplete="off" />
+                        </div>
+                        <div class="form-control mt-2">
+                            <button id="button-cash-out" class="btn btn-primary">Cash Out</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <!-- Cash Out End -->
+
+
+            <!-- Transaction Start-->
+
+            <section id="transaction-form" class="hidden">
+                Transaction
+            </section>
+            <!-- Transaction End -->
+            <!-- Form End -->
     </main>
+    <script src="JS/utilities.js"></script>
+    <script src="JS/home.js"></script>
+    <script src="JS/add-money.js"></script>
+    <script src="JS/cash-out.js"></script>
 </body>
 
 </html>

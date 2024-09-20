@@ -7,9 +7,9 @@ loginButton.addEventListener('click', function(event){
     
     if(phoneNumber === 01627814225 && pinNumber === 1234){
         window.location.href= './home.html'
+        showSectionByID('BG-Image')
     }
     else{
         alert("Incorrect Phone Number or Pin Number")
     }
-
 })
