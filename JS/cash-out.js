@@ -16,6 +16,16 @@ cashOutButton.addEventListener('click', function (event) {
         document.getElementById('balance').innerText = newBalance;
         document.getElementById('out-enter-amount').value = '';
         document.getElementById('out-pin-number').value = '';
+
+        // Show on transaction list
+        const div = document.createElement('div');
+        div.innerHTML=`
+        <span class="grid grid-cols-2 gap-14 bg-red-500 text-white px-2 m-2">
+         <p>Cash Out</p><p>${outBalance} Tk</p>
+        </span>
+        `
+
+        document.getElementById('transaction-list').appendChild(div)
     }
     else {
         alert('Failed to add money! Try Again!!!')

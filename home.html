@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <main class="flex justify-center mt-14">
+    <main class="flex justify-center">
         <div class="artboard artboard-demo phone-1 border-2 border-fuchsia-500 bg-white shadow-2xl">
             <!-- Header Start -->
             <header>
@@ -113,7 +113,12 @@
             <!-- Transaction Start-->
 
             <section id="transaction-form" class="hidden">
-                Transaction
+               <h1 class="font-serif font-bold text-center">Transaction History</h1>
+                <div id="transaction-list" class="overflow-y-scroll h-64">
+                    <span class="grid grid-cols-2 gap-14 bg-slate-500 text-white px-2 m-2">
+                        <p>Details</p><p>Amount</p>
+                    </span>
+                </div>
             </section>
             <!-- Transaction End -->
             <!-- Form End -->
