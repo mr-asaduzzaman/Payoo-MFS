@@ -4,70 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Payoo</title>
+    <title>Payoo - Home</title>
     <!-- Tailwind CDN -->
     <script
         src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <!-- Daisy UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <!-- font-awesome Link -->
+    <script src="https://kit.fontawesome.com/e33ac630af.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <section class="flex justify-center">
-        <div class="mockup-phone">
-            <div class="camera"></div>
-            <div class="display">
-                <div class="artboard artboard-demo phone-1">
-                    <div class="pl-1 mb-11">
-                        <img class="h-36 bg-white p-5 rounded-xl" src="Images/payoo.png" alt="">
-                    </div>
-                    <!-- Header section start -->
-                    <section class="text-center">
-                        <div class="grid grid-cols-3 gap-5">
-                            <a href="/home.html">
-                                <div class="bg-sky-300 p-5 rounded-lg">
-                                    <div class="title font-extrabold">➤ Payoo</div>
-                                </div>
-                            </a>
-                            <div class="bg-slate-300 p-5 rounded-lg">
-                                <div class="title font-extrabold">Balance</div>
-                                <div class="font-sans font-bold">9400</div>
-                            </div>
-                            <a href="/index.html">
-                                <div class="bg-green-300 p-5 rounded-lg">
-                                    <div class="title font-extrabold">🔙 Logout</div>
-                                </div>
-                                </a>
-                        </div>
-                    </section>
-                    <!-- Header section end -->
-
-                    <div class="divider"></div>
-                    <!-- Body section start -->
-                    <section>
-                        <div class="grid grid-cols-3 gap-5">
-                     <a href="/add-money.html"><button id="btn-1" class="btn btn-outline">Add Money</button></a>
-                        <button id="btn-2" class="btn btn-outline">Cash Out</button>
-                        <button id="btn-3" class="btn btn-outline">Transfer Money</button>
-                        <button id="btn-4" class="btn btn-outline">Pay Bill</button>
-                        <button id="btn-5" class="btn btn-outline">Get Offer</button>
-                        <button id="btn-6" class="btn btn-outline">Transaction</button>
-                        </div>
-                    </section>
-                    <!-- Body section start -->
-
-
-                    <!-- Form Section start -->
-                     <section>
-                        
-                     </section>
-                    <!-- Form Section end -->
-                </div>
+    <main class="flex justify-center mt-14">
+        <div class="artboard artboard-demo phone-1 border-2 border-fuchsia-500 bg-white shadow-2xl">
+            <!-- Header Start -->
+            <header>
+                <ul class="menu menu-horizontal bg-indigo-100 rounded-box w-72 flex justify-between">
+                    <li>
+                        <a>
+                            <i class="fa-solid fa-house text-xl"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <label class="font-bold text-xl">$<span>10000</span></label>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="fa-solid fa-right-from-bracket text-xl"></i>
+                        </a>
+                    </li>
+                </ul>
+            </header>
+            <!-- Header End -->
+            <div class="divider"></div>
+            <!-- Button Start -->
+            <div class="grid grid-cols-3 gap-2 mx-2">
+                <button class="btn btn-outline bg-indigo-100 text-white btn-primary">Add Money</button>
+                <button class="btn btn-outline bg-indigo-100 text-white btn-primary">Cash Out</button>
+                <button class="btn btn-outline bg-indigo-100 text-white btn-primary">Transfer Money</button>
+                <button class="btn btn-outline bg-indigo-100 text-white btn-primary">Got Bonus</button>
+                <button class="btn btn-outline bg-indigo-100 text-white btn-primary">Pay Bill</button>
+                <button class="btn btn-outline bg-indigo-100 text-white btn-primary">Transaction</button>
             </div>
-    </section>
-    <script src="JS/login.js"></script>
+            <!-- Button End -->
+            <div class="divider"></div>
+
+
+            <!-- BG Start -->
+            <div class="mt-24">
+                <img class="" src="Images/ddd.webp" alt="">
+            </div>
+            <!-- BG End -->
+
+
+            <!-- Form Start -->
+            <!-- Add Money Start -->
+            <section>
+                <div class=" hidden bg-base-100 max-w-md h-72 shadow-sm rounded-xl">
+                    <form class="card-body">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-bold">Amount to be add</span>
+                            </label>
+                            <input id="enter-amount" type="text" placeholder="Enter Amount"
+                                class="input input-bordered rounded-lg" required />
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-bold">4 digit Pin</span>
+                            </label>
+                            <input id="pin-number" type="password" placeholder=" Enter your 4 digit pin"
+                                class="input input-bordered rounded-lg" required autocomplete="off" />
+                        </div>
+                        <div class="form-control mt-2">
+                            <button id="add-money-button" class="btn btn-primary">Add Money</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <!-- Add Money End -->
+            <!-- Form End -->
+
+    </main>
 </body>
 
 </html>
