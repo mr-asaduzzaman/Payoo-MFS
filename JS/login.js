@@ -6,7 +6,7 @@ loginButton.addEventListener('click', function(event){
     const pinNumber = addInputFieldValueByID('pin-number')
     
     if(phoneNumber === 01627814225 && pinNumber === 1234){
-        window.location.href= '/home.html'
+        window.location.href= './home.html'
     }
     else{
         alert("Incorrect Phone Number or Pin Number")
